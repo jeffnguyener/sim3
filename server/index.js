@@ -6,6 +6,8 @@ const app = express()
 const {SERVER_PORT, SESSION_SECRET, CONNECTION_STRING} = process.env
 app.use(express.json())
 
+const ctrl = require('./controller')
+
 app.use(session({
     secret: SESSION_SECRET,
     resave: false,
@@ -14,6 +16,9 @@ app.use(session({
         maxAge: 1000 * 60 * 60
     }
 }))
+
+//POST ENDPOINTS
+app.post('/auth/register', ctrl.register)
 
 
 

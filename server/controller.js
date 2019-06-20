@@ -1,4 +1,4 @@
-const bcrypt = require("bcryptjs");
+const bcrypt = require('bcrypt')
 
 module.exports = {
   register: async (req, res) => {
@@ -13,6 +13,9 @@ module.exports = {
     session.user = { id: createUser[0].id, username: createUser[0].username, profile: createUser[0].profile }
     res.status(200).send(session.user)
   },
-
+  login: async (req, res) => {
+    const { username, password } = req.body
+    const db = req.app.get('db')
+  }
   
 };

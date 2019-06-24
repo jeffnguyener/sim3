@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import styled from "styled-components";
 import * as Icon from 'react-feather';
 
-import "./Login.css";
+import "./Auth.css";
 
 const Button = styled.button`
   font-family: sans-serif;

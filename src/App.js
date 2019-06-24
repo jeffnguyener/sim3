@@ -1,20 +1,13 @@
-import React from 'react';
-import './App.css';
-import Dashboard from './Components/Dashboard';
-import Form from './Components/Form';
-import Nav from './Components/Nav';
-import Post from './Components/Post';
-import Auth from './Components/Auth';
+import React from "react";
+import "./App.css";
+import { HashRouter } from "react-router-dom";
+import router from "./router";
 
 function App() {
   return (
-    <div className="App">
-      <Auth />
-      <Dashboard />
-      <Form />
-      <Nav />
-      <Post />
-    </div>
+    <HashRouter>
+      {router}
+    </HashRouter>
   );
 }
 

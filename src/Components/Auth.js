@@ -3,6 +3,7 @@ import axios from "axios";
 import { updateUser } from "../redux/reducer";
 import { connect } from "react-redux";
 import styled from "styled-components";
+import * as Icon from 'react-feather';
 
 import "./Login.css";
 
@@ -55,9 +56,7 @@ class Auth extends Component {
     return (
       <body>
         <div className="login-form">
-          <span className="skull" role="img" aria-label="skull">
-            ☠︎
-          </span>
+        <Icon.Aperture size={50} />
           <br />
           <br />
           <h1 classname="helo">helo</h1>

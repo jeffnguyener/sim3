@@ -54,7 +54,7 @@ class Auth extends Component {
   }
   render() {
     return (
-      <body>
+      <div className="auth-body">
         <div className="login-form">
         <Icon.Aperture size={50} />
           <br />
@@ -89,7 +89,7 @@ class Auth extends Component {
             </div>
           </form>
         </div>
-      </body>
+      </div>
     );
   }
 }

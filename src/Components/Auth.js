@@ -57,8 +57,7 @@ class Auth extends Component {
       <div className="auth-body">
         <div className="login-form">
         <Icon.Aperture size={50} />
-          <br />
-          <br />
+        <br />
           <h1 classname="helo">helo</h1>
           <br />
           <br />

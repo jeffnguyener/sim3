@@ -9,10 +9,9 @@ div .auth-body {
 }
 
 .login-form {
-    width: 20%;
-    height: 15vh;
+    width: 40%;
+    height: 35vh;
     border: 1px solid transparent;
-    padding: 15%;
     margin-left: 30%;
     box-shadow: 1px 7px 15px 1px rgb(146, 146, 146);
     display: flex;

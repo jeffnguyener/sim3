@@ -8,9 +8,9 @@ import "./Login.css";
 
 const Button = styled.button`
   font-family: sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   border: none;
-  padding: 3px 8px;
+  padding: 5px 10px;
   background: gray;
   color: white;
   &:hover {

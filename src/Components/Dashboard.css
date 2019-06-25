@@ -48,3 +48,7 @@ div > .power-icon {
     margin-top: 550px;
     display: flex;
 }
+
+.icons {
+    color: white;
+}

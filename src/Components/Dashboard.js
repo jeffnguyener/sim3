@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import * as Icon from "react-feather";
+import { Link } from 'react-router-dom'
 
 import "./Dashboard.css";
 
@@ -11,13 +12,19 @@ export default class Dashboard extends Component {
           <div className="user-display">USER</div>
         </div>
         <div className="home-icon">
-          <Icon.Home size={40} />
+          <Link to="/dashboard">
+          <Icon.Home size={40} className="icons" />
+          </Link>
         </div>
         <div className="add-icon">
-          <Icon.FilePlus size={40} />
+          <Link to="/post">
+          <Icon.FilePlus size={40} className="icons" />
+          </Link>
         </div>
         <div className="power-icon">
-          <Icon.Power size={40} />
+          <Link to="/auth">
+          <Icon.Power size={40} className="icons" />
+          </Link>
         </div>
       </div>
     );

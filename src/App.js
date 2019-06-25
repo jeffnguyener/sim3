@@ -26,5 +26,4 @@ const RouteContainer = styled.div`
   right: 0;
 `
 
-
 export default App;

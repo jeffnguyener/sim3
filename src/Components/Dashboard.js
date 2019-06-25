@@ -5,7 +5,9 @@ import "./Dashboard.css";
 export default class Dashboard extends Component {
   render() {
     return (
-        <div className="dashboard-console">
+        <div className="dashContainer">
+          <div className="dash-console" />
+          <div className="post-container" />
         </div>
     );
   }

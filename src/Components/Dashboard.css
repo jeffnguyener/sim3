@@ -10,9 +10,22 @@ div .dash-console {
     border: 1px solid transparent;
     box-shadow: 1px 1px 4px 0 gray;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     margin-left: 10%;
     margin-top: 5%;
+}
+
+div .dash-search {
+    display: flex;
+    width: 60%;
+    height: 5vh;
+    
+}
+
+div .dash-profile {
+    display: flex;
+
+
 }
 
 div .post-container {

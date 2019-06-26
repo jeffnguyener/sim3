@@ -11,29 +11,40 @@ div .dash-console {
     box-shadow: 1px 1px 4px 0 gray;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     margin-left: 10%;
     margin-top: 5%;
 }
 
-div .dash-search {
+div .dash-profile {
+    border: 1px solid lightgrey;
+    border-radius: 40px;
+    box-shadow: 0px 1px 5px 1px rgb(146, 146, 146);
+    background: white;
+    width: 50px;
+    height: 50px;
     display: flex;
-    width: 60%;
-    height: 5vh;
-    
+    margin: 10px;
 }
 
-div .dash-profile {
+div .dash-search {
     display: flex;
-
+    width: 70%;
+    height: 4vh;
+    margin-left: 3%;
+    border: 1px solid lightgrey;
 
 }
 
 div .post-container {
     width: 80%;
-    height: 30vh;
+    height: auto;
     background: whitesmoke;
     margin-left: 10%;
     margin-top: 5%;
     border: 1px solid transparent;
     box-shadow: 1px 1px 4px 0 gray;
+    display: flex;
+    flex-direction: row;
 }

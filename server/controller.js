@@ -17,7 +17,7 @@ module.exports = {
     const { username, password } = req.body
     const db = req.app.get('db')
     const { session } = req
-    const userFound = await db.check.username({ username })
+    const userFound = await db.check_username({ username })
     if (!userFound[0]) return res.status(401).send('User does not exist')
     const authenticated = bcrypt.compareSync(password, userFound[0].password)
     if (authenticated) {
@@ -31,6 +31,21 @@ module.exports = {
     // console.log(req.session)
     req.session.destroy();
     return res.status(200).send("Logged Out");
+  },
+  getPosts: async (req, res) => {
+    const db = req.app.get('db')
+    const { session } = req
+    if(session.user){
+      const usersPosts = await db.get_posts({id: session.user.id
+      });
+      const { 
+        title,
+        img, 
+        content
+      } = usersPosts[0];
+      return res.status(200).send({title, img, content})
+    }
+    return res.status(401).send("Please Log In");
   },
   
 };

@@ -1,11 +1,14 @@
 const initialState = {
   username: "",
   password: "",
-  profile: ""
+  profile: "",
+  post: ""
 };
 
 const UPDATE_USER = "UPDATE_USER";
 const CLEAR_USER = "CLEAR_USER";
+
+const ADD_POST = "ADD_POST"
 
 export function updateUser(user) {
   return {
@@ -20,6 +23,13 @@ export function clearUser() {
   };
 }
 
+export function addPost(post){
+  return {
+    type: ADD_POST,
+    payload: post
+  }
+}
+
 function reducer(state = initialState, action) {
   switch (action.type) {
     case UPDATE_USER:
@@ -27,6 +37,9 @@ function reducer(state = initialState, action) {
       return { ...state, username, password: password, profile };
     case CLEAR_USER:
       return { ...initialState };
+    case ADD_POST:
+      const { post } = action.payload;
+      return { ...state, post}
     default:
       return state;
   }

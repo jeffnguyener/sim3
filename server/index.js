@@ -19,10 +19,16 @@ app.use(session({
 
 //GET ENDPOINTS
 app.get('/auth/logout', ctrl.logout)
+app.get('/auth/usersposts', ctrl.getPosts)
 
 //POST ENDPOINTS
 app.post('/auth/register', ctrl.register)
 app.post('/auth/login', ctrl.login)
+
+//PUT ENDPOINTS
+
+
+//DELETE ENDPOINTS
 
 
 

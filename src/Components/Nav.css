@@ -2,6 +2,11 @@ body {
     background: rgb(220, 220, 220);
 }
 
+button {
+    background: transparent;
+    border: 0 transparent;
+}
+
 div .navbar {
     border: 1px solid transparent;
     width: 10%;

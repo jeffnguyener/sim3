@@ -1,10 +1,21 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import axios from "axios";
+import { updateUser, clearUser } from "../redux/reducer";
 import * as Icon from "react-feather";
+import { connect } from "react-redux";
 
 import "./Nav.css";
 
-export default class Nav extends Component {
+class Nav extends Component {
+  handUserLogout = () => {
+    axios.get("/auth/logout").then(res => {
+      this.props.clearUser();
+      window.alert(res.data);
+      this.props.history.push("/");
+    });
+  };
+
   render() {
     return (
       <div className="nav-body">
@@ -23,12 +34,26 @@ export default class Nav extends Component {
             </Link>
           </div>
           <div className="power-icon">
-            <Link to="/auth">
+            <button onClick={this.handUserLogout}>
               <Icon.Power size={40} className="icons" />
-            </Link>
+              </button>
           </div>
         </div>
       </div>
     );
   }
 }
+
+function mapStateToProps(reduxState) {
+  return reduxState;
+}
+
+const mapDispatchToProps = {
+  clearUser,
+  updateUser
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Nav);

@@ -8,6 +8,18 @@ import { connect } from "react-redux";
 import "./Nav.css";
 
 class Nav extends Component {
+
+  componentDidMount() {
+    axios
+      .get("/auth/usersposts")
+      .then(res => {
+        this.props.updateUser(res.data);
+      })
+      .catch(err => {
+        console.log(err.message);
+      });
+  }
+
   handUserLogout = () => {
     axios.get("/auth/logout").then(res => {
       this.props.clearUser();

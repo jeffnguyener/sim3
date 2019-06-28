@@ -47,5 +47,13 @@ module.exports = {
     }
     return res.status(401).send("Please Log In");
   },
-  
+  newPosts: (req, res) => {
+    const db = req.app.get('db')
+    const { post } = req.body
+    db.new_post({title: post.title, img: post.img, content: post.content})
+    .then(response => {
+      console.log(response)
+    })
+  }
+   
 };

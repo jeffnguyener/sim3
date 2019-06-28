@@ -25,6 +25,8 @@ app.get('/auth/usersposts', ctrl.getPosts)
 app.post('/auth/register', ctrl.register)
 app.post('/auth/login', ctrl.login)
 
+app.post('/user/newpost', ctrl.newPosts)
+
 //PUT ENDPOINTS
 
 

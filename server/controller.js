@@ -60,6 +60,14 @@ module.exports = {
     const { session } = req
     const info = await db.get_user_info({ id: session.user.id })
     return res.status(200).send(info)
+  }, 
+  search: async (req, res) => {
+    const db = req.app.get('db')
+    const { title } = req.query
+    if (!title) {
+      const searchTitles = db.search_titles({id: title.id})
+      res.status(200).send(searchTitles)
+    }
   }
    
 };

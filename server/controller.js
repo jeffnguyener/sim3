@@ -54,6 +54,12 @@ module.exports = {
     .then(response => {
       console.log(response)
     })
+  },
+  getUserInfo: async (req, res) => {
+    const db = req.app.get('db')
+    const { session } = req
+    const info = await db.get_user_info({ id: session.user.id })
+    return res.status(200).send(info)
   }
    
 };

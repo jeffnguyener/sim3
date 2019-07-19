@@ -5,8 +5,12 @@ import { connect } from 'react-redux'
 import "./Dashboard.css";
 
 class Dashboard extends Component {
+  constructor(props, {match}) {
+    super(props, {match})
+  }
   state = {
-    posts: []
+    posts: [],
+    postID: match.params.postID
   }
 
   componentDidMount(){

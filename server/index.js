@@ -33,7 +33,7 @@ app.post('/user/newpost', ctrl.newPosts)
 
 //DELETE ENDPOINTS
 
-
+app.use(checkForSession)
 
 massive(CONNECTION_STRING).then((database) => {
     app.set('db', database)

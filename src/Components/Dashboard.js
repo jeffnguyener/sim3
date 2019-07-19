@@ -10,7 +10,7 @@ class Dashboard extends Component {
   }
   state = {
     posts: [],
-    postID: match.params.postID
+    userPostID: match.params.userPostID
   }
 
   componentDidMount(){
